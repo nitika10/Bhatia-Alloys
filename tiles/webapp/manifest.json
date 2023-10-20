@@ -17,6 +17,7 @@
     }
   },
   "sap.ui": {
+    "fullWidth": true,
     "technology": "UI5",
     "icons": {
       "icon": "",
@@ -79,11 +80,121 @@
       "routes": [
         {
           "name": "RouteMain",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetMain"
           ]
-        }
+        },
+        {
+          "name": "mm_tiles",
+          "pattern": "P2PMMTiles",
+          "target": "P2PMMTarget"
+      },
+      {
+          "name": "material",
+          "pattern": "MaterialTiles",
+          "target": "MaterialTarget"
+      },
+      {
+          "name": "vendor_mm",
+          "pattern": "VendorMMTiles",
+          "target": "VendorMMTarget"
+      },
+      {
+          "name": "vendor_sd",
+          "pattern": "VendorSDTiles",
+          "target": "VendorSDTarget"
+      },
+      {
+          "name": "rfq",
+          "pattern": "RFQTiles",
+          "target": "RFQTarget"
+      },
+      {
+          "name": "agreement",
+          "pattern": "AgreementTiles",
+          "target": "AgreementTarget"
+      },
+      {
+          "name": "purch_req",
+          "pattern": "PurchReqTiles",
+          "target": "PurchReqTarget"
+      },
+      {
+          "name": "purch_order",
+          "pattern": "PurhOrderTiles",
+          "target": "PurchOrderTarget"
+      },
+      {
+          "name": "goods",
+          "pattern": "GoodsTiles",
+          "target": "GoodsTarget"
+      },
+      {
+          "name": "invoice",
+          "pattern": "InvoiceTiles",
+          "target": "InvoiceTarget"
+      },
+      {
+          "name": "sd_tiles",
+          "pattern": "SDTiles",
+          "target": "SDTarget"
+      },
+      {
+          "name": "sales_order",
+          "pattern": "SalesOrderTiles",
+          "target": "SalesOrderTarget"
+      },
+      {
+          "name": "billing_document",
+          "pattern": "BillingDocumentTiles",
+          "target": "BillingDocumentTarget"
+      },
+      {
+          "name": "outbound_delivery",
+          "pattern": "OutboundDeliveryTiles",
+          "target": "OutboundDeliveryTarget"
+      },
+      {
+          "name": "quotation",
+          "pattern": "QuotationTiles",
+          "target": "QuotationTarget"
+      },
+      {
+          "name": "contract",
+          "pattern": "ContractTiles",
+          "target": "ContractTarget"
+      },
+      {
+          "name": "pp_tiles",
+          "pattern": "PPTiles",
+          "target": "PPTarget"
+      },
+      {
+          "name": "production_order",
+          "pattern": "ProductionOrderTiles",
+          "target": "ProductionOrderTarget"
+      },
+      {
+          "name": "display",
+          "pattern": "DisplayTiles",
+          "target": "DisplayTarget"
+      },
+      {
+          "name": "fi_tiles",
+          "pattern": "FITiles",
+          "target": "FITarget"
+      },
+      {
+          "name": "vendor_fi",
+          "pattern": "VendorFITiles",
+          "target": "VendorFITarget"
+      },
+      {
+          "name": "payment",
+          "pattern": "PaymentTiles",
+          "target": "PaymentTarget"
+      }
       ],
       "targets": {
         "TargetMain": {
@@ -92,7 +203,161 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
-        }
+        },
+        "P2PMMTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "P2P_MM_Tiles",
+          "viewName": "P2P_MM_Tiles"
+      },
+      "MaterialTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Material",
+          "viewName": "Material"
+      },
+      "VendorMMTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "VendorMM",
+          "viewName": "VendorMM"
+      },
+      "VendorSDTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "VendorSD",
+          "viewName": "VendorSD"
+      },
+      "RFQTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "RFQ",
+          "viewName": "RFQ"
+      },
+      "AgreementTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Agreement",
+          "viewName": "Agreement"
+      },
+      "PurchReqTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "PurchReq",
+          "viewName": "PurchReq"
+      },
+      "PurchOrderTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "PurchOrder",
+          "viewName": "PurchOrder"
+      },
+      "GoodsTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Goods",
+          "viewName": "Goods"
+      },
+      "InvoiceTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Invoice",
+          "viewName": "Invoice"
+      },
+      "SDTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "SDTiles",
+          "viewName": "SDTiles"
+      },
+      "SalesOrderTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "SalesOrder",
+          "viewName": "SalesOrder"
+      },
+      "BillingDocumentTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "BillingDocument",
+          "viewName": "BillingDocument"
+      },
+      "OutboundDeliveryTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "OutboundDelivery",
+          "viewName": "OutboundDelivery"
+      },
+      "QuotationTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Quotation",
+          "viewName": "Quotation"
+      },
+      "ContractTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Contract",
+          "viewName": "Contract"
+      },
+      "PPTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "PPTiles",
+          "viewName": "PPTiles"
+      },
+      "ProductionOrderTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "ProductionOrder",
+          "viewName": "ProductionOrder"
+      },
+      "DisplayTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "DisplayTiles",
+          "viewName": "DisplayTiles"
+      },
+      "FITarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "FITiles",
+          "viewName": "FITiles"
+      },
+      "VendorFITarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "VendorFI",
+          "viewName": "VendorFI"
+      },
+      "PaymentTarget": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Payment",
+          "viewName": "Payment"
+      }
       }
     },
     "rootView": {

@@ -1,0 +1,27 @@
+<mvc:View
+	controllerName="com.bhatia.tiles.controller.ProductionOrder"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+	<Page id="tilesProductionOrder" title="{i18n>titleProductionOrder}">
+		<content>
+			<l:VerticalLayout id="vLayoutProductionOrder">
+				<l:HorizontalLayout id="hLayoutProductionOrder" content="{productionOrder>/}" allowWrapping="true">
+					<GenericTile id="genericTileProductionOrder" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{productionOrder>title}"
+						subheader="{productionOrder>description}" press="productionOrderTilePress(${productionOrder>semanticObject}, ${productionOrder>action})">
+						<TileContent>
+							<ImageContent src="{productionOrder>icon}"/>
+						</TileContent>
+					</GenericTile>
+				</l:HorizontalLayout>
+			</l:VerticalLayout>
+		</content>
+	</Page>
+
+</mvc:View>

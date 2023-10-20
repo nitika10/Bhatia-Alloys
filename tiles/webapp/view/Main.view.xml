@@ -1,7 +1,24 @@
 <mvc:View controllerName="com.bhatia.tiles.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <!-- <Page id="page" title="{i18n>title}">
         <content />
+    </Page> -->
+
+
+    <Page id="tilesBhatia" title="{i18n>title}">
+		<content>
+			<l:VerticalLayout id="vLayoutHome">
+				<l:HorizontalLayout id="hLayoutHome" content="{tilesBhatia>/}" allowWrapping="true">
+					<GenericTile id="genericTileHome" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{tilesBhatia>title}"
+						subheader="{tilesBhatia>description}" press="press(${tilesBhatia>route})">
+						<TileContent>
+							<ImageContent src="{tilesBhatia>icon}"/>
+						</TileContent>
+					</GenericTile>
+				</l:HorizontalLayout>
+			</l:VerticalLayout>
+		</content>
     </Page>
+
 </mvc:View>

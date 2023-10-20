@@ -1,0 +1,27 @@
+<mvc:View
+	controllerName="com.bhatia.tiles.controller.PurchOrder"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+	<Page id="tilesPurchOrder" title="{i18n>titlePurchOrder}">
+		<content>
+			<l:VerticalLayout id="vLayoutPurchOrder">
+				<l:HorizontalLayout id="hLayoutPurchOrder" content="{purchorder>/}" allowWrapping="true">
+					<GenericTile id="genericTilePurchOrder" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{purchorder>title}"
+						subheader="{purchorder>description}" press="purchorderTilePress(${purchorder>semanticObject}, ${purchorder>action})">
+						<TileContent>
+							<ImageContent src="{purchorder>icon}"/>
+						</TileContent>
+					</GenericTile>
+				</l:HorizontalLayout>
+			</l:VerticalLayout>
+		</content>
+	</Page>
+
+</mvc:View>

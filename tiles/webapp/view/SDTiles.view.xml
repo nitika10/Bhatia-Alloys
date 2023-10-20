@@ -1,0 +1,18 @@
+<mvc:View controllerName="com.bhatia.tiles.controller.SDTiles"  xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="tilesSD" title="{i18n>titleSD}">
+		<content>
+			<l:VerticalLayout id="vLayoutSD">
+				<l:HorizontalLayout id="hLayoutSD" content="{tilesSD>/}" allowWrapping="true">
+					<GenericTile id="genericTileSD" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{tilesSD>title}"
+						subheader="{tilesSD>description}" press="press(${tilesSD>route})">
+						<TileContent>
+							<ImageContent src="{tilesSD>icon}"/>
+						</TileContent>
+					</GenericTile>
+				</l:HorizontalLayout>
+			</l:VerticalLayout>
+		</content>
+    </Page>
+</mvc:View>

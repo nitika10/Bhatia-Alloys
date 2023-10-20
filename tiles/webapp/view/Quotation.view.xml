@@ -1,0 +1,27 @@
+<mvc:View
+	controllerName="com.bhatia.tiles.controller.Quotation"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+	<Page id="tilesQuotation" title="{i18n>titleQuotation}">
+		<content>
+			<l:VerticalLayout id="vLayoutQuotation">
+				<l:HorizontalLayout id="hLayoutQuotation" content="{quotation>/}" allowWrapping="true">
+					<GenericTile id="genericTileQuotation" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{quotation>title}"
+						subheader="{quotation>description}" press="quotationTilePress(${quotation>semanticObject}, ${quotation>action})">
+						<TileContent>
+							<ImageContent src="{quotation>icon}"/>
+						</TileContent>
+					</GenericTile>
+				</l:HorizontalLayout>
+			</l:VerticalLayout>
+		</content>
+	</Page>
+
+</mvc:View>

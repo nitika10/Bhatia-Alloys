@@ -1,0 +1,27 @@
+<mvc:View
+	controllerName="com.bhatia.tiles.controller.Contract"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+	<Page id="tilesContract" title="{i18n>titleContract}">
+		<content>
+			<l:VerticalLayout id="vLayoutContract">
+				<l:HorizontalLayout id="hLayoutContract" content="{contract>/}" allowWrapping="true">
+					<GenericTile id="genericTileContract" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{contract>title}"
+						subheader="{contract>description}" press="contractTilePress(${contract>semanticObject}, ${contract>action})">
+						<TileContent>
+							<ImageContent src="{contract>icon}"/>
+						</TileContent>
+					</GenericTile>
+				</l:HorizontalLayout>
+			</l:VerticalLayout>
+		</content>
+	</Page>
+
+</mvc:View>
